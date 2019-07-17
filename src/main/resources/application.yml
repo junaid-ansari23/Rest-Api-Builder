@@ -1,0 +1,24 @@
+server:  
+  port: ${PORT:8080}
+  servlet:
+    context-path: /builder
+spring:
+  profiles: default
+  datasource:
+    driver-class-name: com.sap.db.jdbc.Driver
+    url : give-your-host
+    username: demo
+    password: demo123
+  cache:
+    caffeine:
+      spec: maximumSize=500, expireAfterAccess=36000s 
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: api-registration 
+  env:
+    name: local
+  security:  
+    key: dasappkey001212
+

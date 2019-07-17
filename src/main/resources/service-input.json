@@ -1,0 +1,36 @@
+{
+  "requestorApp": "demo_app",
+  "userId": "demo_user",
+  "columns": [
+    "YEAR",
+    "MONTH",
+    "LEVEL_1_NAME",
+    "ACTUAL_BOOKINGS"
+  ],  
+  "aggregation": [
+    {
+      "function":"sum",
+      "columns":["YEAR","MONTH"]
+    }
+  ],
+  "filters": [
+    {
+      "YEAR": [
+        "2019",
+        "2018"
+      ]
+    }
+  ],
+  "orders": {
+    "orderBy": ["ACTUAL_BOOKINGS"],
+    "direction": "ASC"
+  },
+  "groupBy": [
+    "YEAR",
+    "MONTH"
+  ],
+  "paging": {
+    "offset": "1",
+    "limit": "100"
+  }
+}
