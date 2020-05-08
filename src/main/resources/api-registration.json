@@ -2,20 +2,20 @@
   "apiName": "Demo API",
   "endPoint": "/demo/data",
   "database": "HANA",
-  "databaseName": "HIP",
-  "requesterApp": "DGM",
+  "databaseName": "Test",
+  "requesterApp": "TestUser",
   "reportConfig": [
     {
-      "databaseView": "Executive-QBR.bookings/RTB_BOOKINGS",
+      "databaseView": "Mydatabase.myView",
       "objectType": "VIEW",
       "databaseConnection": {
-        "database": "HANA",
-        "databaseName": "HIP",
+        "database": "Hana",
+        "databaseName": "Test",
         "connectionType": "com.sap.db.jdbc.Driver",
-        "connectionUrl": "jdbc:sap://eds-hana-dev-01:30013;eds-hana-dev-02:30013;eds-hana-dev-05:30013?databaseName=HIP",
-        "schema": "DISE",
-        "user": "DISE",
-        "password": "d02DISE02"
+        "connectionUrl": "jdbc:sap://host:port/database=databaseName",
+        "schema": "myschema",
+        "user": "user",
+        "password": "password"
       },
       "queryMode": "no",
       "recordLimit": 50,
